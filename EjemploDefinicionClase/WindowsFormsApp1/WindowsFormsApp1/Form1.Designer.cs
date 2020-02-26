@@ -37,14 +37,14 @@
             this.txtTitular = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblSaldo = new System.Windows.Forms.Label();
-            this.rbtnConsignar = new System.Windows.Forms.RadioButton();
-            this.rbtnRetiro = new System.Windows.Forms.RadioButton();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnOperacion = new System.Windows.Forms.Button();
             this.txtDinero = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnOperacion = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
+            this.rbtnRetiro = new System.Windows.Forms.RadioButton();
+            this.rbtnConsignar = new System.Windows.Forms.RadioButton();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lstHistorial = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -146,45 +146,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Transacciones";
             // 
-            // label3
+            // btnHistorial
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Saldo";
+            this.btnHistorial.Location = new System.Drawing.Point(19, 190);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(130, 23);
+            this.btnHistorial.TabIndex = 9;
+            this.btnHistorial.Text = "ver historial";
+            this.btnHistorial.UseVisualStyleBackColor = true;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
-            // lblSaldo
+            // btnOperacion
             // 
-            this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(63, 28);
-            this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(13, 13);
-            this.lblSaldo.TabIndex = 4;
-            this.lblSaldo.Text = "0";
-            // 
-            // rbtnConsignar
-            // 
-            this.rbtnConsignar.AutoSize = true;
-            this.rbtnConsignar.Checked = true;
-            this.rbtnConsignar.Location = new System.Drawing.Point(22, 115);
-            this.rbtnConsignar.Name = "rbtnConsignar";
-            this.rbtnConsignar.Size = new System.Drawing.Size(72, 17);
-            this.rbtnConsignar.TabIndex = 5;
-            this.rbtnConsignar.TabStop = true;
-            this.rbtnConsignar.Text = "Consignar";
-            this.rbtnConsignar.UseVisualStyleBackColor = true;
-            // 
-            // rbtnRetiro
-            // 
-            this.rbtnRetiro.AutoSize = true;
-            this.rbtnRetiro.Location = new System.Drawing.Point(22, 138);
-            this.rbtnRetiro.Name = "rbtnRetiro";
-            this.rbtnRetiro.Size = new System.Drawing.Size(53, 17);
-            this.rbtnRetiro.TabIndex = 6;
-            this.rbtnRetiro.Text = "Retiro";
-            this.rbtnRetiro.UseVisualStyleBackColor = true;
+            this.btnOperacion.Location = new System.Drawing.Point(19, 161);
+            this.btnOperacion.Name = "btnOperacion";
+            this.btnOperacion.Size = new System.Drawing.Size(130, 23);
+            this.btnOperacion.TabIndex = 6;
+            this.btnOperacion.Text = "Realizar operación";
+            this.btnOperacion.UseVisualStyleBackColor = true;
+            this.btnOperacion.Click += new System.EventHandler(this.btnOperacion_Click);
             // 
             // txtDinero
             // 
@@ -202,31 +182,52 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Ingrese la cantidad de dinero";
             // 
-            // btnOperacion
+            // rbtnRetiro
             // 
-            this.btnOperacion.Location = new System.Drawing.Point(19, 161);
-            this.btnOperacion.Name = "btnOperacion";
-            this.btnOperacion.Size = new System.Drawing.Size(130, 23);
-            this.btnOperacion.TabIndex = 6;
-            this.btnOperacion.Text = "Realizar operación";
-            this.btnOperacion.UseVisualStyleBackColor = true;
-            this.btnOperacion.Click += new System.EventHandler(this.btnOperacion_Click);
+            this.rbtnRetiro.AutoSize = true;
+            this.rbtnRetiro.Location = new System.Drawing.Point(22, 138);
+            this.rbtnRetiro.Name = "rbtnRetiro";
+            this.rbtnRetiro.Size = new System.Drawing.Size(53, 17);
+            this.rbtnRetiro.TabIndex = 6;
+            this.rbtnRetiro.Text = "Retiro";
+            this.rbtnRetiro.UseVisualStyleBackColor = true;
             // 
-            // btnHistorial
+            // rbtnConsignar
             // 
-            this.btnHistorial.Location = new System.Drawing.Point(19, 190);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(130, 23);
-            this.btnHistorial.TabIndex = 9;
-            this.btnHistorial.Text = "ver historial";
-            this.btnHistorial.UseVisualStyleBackColor = true;
+            this.rbtnConsignar.AutoSize = true;
+            this.rbtnConsignar.Checked = true;
+            this.rbtnConsignar.Location = new System.Drawing.Point(22, 115);
+            this.rbtnConsignar.Name = "rbtnConsignar";
+            this.rbtnConsignar.Size = new System.Drawing.Size(72, 17);
+            this.rbtnConsignar.TabIndex = 5;
+            this.rbtnConsignar.TabStop = true;
+            this.rbtnConsignar.Text = "Consignar";
+            this.rbtnConsignar.UseVisualStyleBackColor = true;
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Location = new System.Drawing.Point(63, 28);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(13, 13);
+            this.lblSaldo.TabIndex = 4;
+            this.lblSaldo.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Saldo";
             // 
             // lstHistorial
             // 
             this.lstHistorial.FormattingEnabled = true;
             this.lstHistorial.Location = new System.Drawing.Point(350, 26);
             this.lstHistorial.Name = "lstHistorial";
-            this.lstHistorial.Size = new System.Drawing.Size(187, 407);
+            this.lstHistorial.Size = new System.Drawing.Size(321, 407);
             this.lstHistorial.TabIndex = 3;
             // 
             // Form1

@@ -26,34 +26,35 @@ namespace WindowsFormsApp1
            // MessageBox.Show(Jaime.Addres);
             Jaime.Addres = "Cra 33 #33-33";
             Jaime.Cellphone = "3012223366";
-           // MessageBox.Show(Jaime.Cellphone);
-           /*
-            Persona Milena = new Persona("Milena");
-            Persona Esperanza = new Persona("Esperanza","Calle 1");
-            Persona Eddie = new Persona("Eddie", "Calle 6", "301222555");
-            Persona Ivan = new Persona("Ivan",cellphone:"315666666");
+            // MessageBox.Show(Jaime.Cellphone);
+            /*
+             Persona Milena = new Persona("Milena");
+             Persona Esperanza = new Persona("Esperanza","Calle 1");
+             Persona Eddie = new Persona("Eddie", "Calle 6", "301222555");
+             Persona Ivan = new Persona("Ivan",cellphone:"315666666");
 
-            BankAccount colmena = new BankAccount("mario");
-            MessageBox.Show("Número de cuenta colmena: " + colmena.NumeroCuenta.ToString());
+             BankAccount colmena = new BankAccount("mario");
+             MessageBox.Show("Número de cuenta colmena: " + colmena.NumeroCuenta.ToString());
 
-            BankAccount sudameris = new BankAccount("Luigi");
-            MessageBox.Show("Número de cuenta sudameris: " + sudameris.NumeroCuenta.ToString());
+             BankAccount sudameris = new BankAccount("Luigi");
+             MessageBox.Show("Número de cuenta sudameris: " + sudameris.NumeroCuenta.ToString());
 
-            BankAccount bancodo = new BankAccount("Cupa");
-            MessageBox.Show("Número de cuenta bancocodo: " + bancodo.NumeroCuenta.ToString());
+             BankAccount bancodo = new BankAccount("Cupa");
+             MessageBox.Show("Número de cuenta bancocodo: " + bancodo.NumeroCuenta.ToString());
 
-            try
-            {
-                colmena.MakeWithdrawal(100000);
-                MessageBox.Show("Retiro exitoso, el nuevo saldo es: "+colmena.Saldo);
-            }
-            catch(Exception r)
-            {
-                MessageBox.Show(r.Message);
-            }
-            */
-            
-            
+             try
+             {
+                 colmena.MakeWithdrawal(100000);
+                 MessageBox.Show("Retiro exitoso, el nuevo saldo es: "+colmena.Saldo);
+             }
+             catch(Exception r)
+             {
+                 MessageBox.Show(r.Message);
+             }
+             */
+
+
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -79,6 +80,7 @@ namespace WindowsFormsApp1
                 lblNumeroCuenta.Text = cuentaBancaria.NumeroCuenta.ToString();
                 lblSaldo.Text = cuentaBancaria.Saldo.ToString();
                 groupBox2.Enabled = true;
+                lstHistorial.Items.Clear();
             }
             else if (txtTitular.Text != "" && txtSaldo.Text == "")
             {
@@ -86,6 +88,7 @@ namespace WindowsFormsApp1
                 lblNumeroCuenta.Text = cuentaBancaria.NumeroCuenta.ToString();
                 lblSaldo.Text = cuentaBancaria.Saldo.ToString();
                 groupBox2.Enabled = true;
+                lstHistorial.Items.Clear();
             }
             else {
                 MessageBox.Show("Se necesita el nombre del titular");
@@ -120,6 +123,16 @@ namespace WindowsFormsApp1
 
             }
             lblSaldo.Text = cuentaBancaria.Saldo.ToString();
+        }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            lstHistorial.Items.Clear();
+            foreach (var x in cuentaBancaria.Historico)
+            {
+                lstHistorial.Items.Add(x.RegistroHorario + " " + x.TipoOperacion+ " " + x.Monto);
+            }
+            
         }
     }
 }
