@@ -17,13 +17,33 @@ namespace WindowsFormsApp1
         public string NombreTitular { get => nombreTitular; set => nombreTitular = value; }
         public double Saldo { get => saldo; set => saldo = value; }
 
-        public BankAccount() {
+        public BankAccount(string nombre) {
             //por ser estático, la clase lleva la cuenta incremental, no los objetos
             numeroCuenta++;
-
-
+            nombreTitular = nombre;
+            saldo = 50000;
+        }
+        public BankAccount(string nombre, double inicial) {
+            numeroCuenta++;
+            nombreTitular = nombre;
+            saldo = inicial;
         }
 
+        public void makeDeposit(double dinero){
+            saldo+=dinero;
+        }
+
+        public void MakeWithdrawal(double dinero){
+            
+            if(dinero>saldo){
+                throw new Exception("No es posible realizar el retiro");
+            }
+            else
+            {
+                saldo-=dinero;
+            }
+
+        }
 
     }
 }
