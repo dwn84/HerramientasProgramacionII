@@ -1,0 +1,9 @@
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\bin\Debug\CuentaBancaria.exe.config
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\bin\Debug\CuentaBancaria.exe
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\bin\Debug\CuentaBancaria.pdb
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\obj\Debug\CuentaBancaria.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\obj\Debug\CuentaBancaria.Form1.resources
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\obj\Debug\CuentaBancaria.Properties.Resources.resources
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\obj\Debug\CuentaBancaria.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\obj\Debug\CuentaBancaria.exe
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\CuentaBancaria\CuentaBancaria\obj\Debug\CuentaBancaria.pdb
