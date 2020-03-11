@@ -1,0 +1,10 @@
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\bin\Debug\EjemploDatagrid.exe.config
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\bin\Debug\EjemploDatagrid.exe
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\bin\Debug\EjemploDatagrid.pdb
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.Form1.resources
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.Properties.Resources.resources
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.exe
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.pdb
+C:\Users\Usuario\Documents\GitHub\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.frmFactura.resources
