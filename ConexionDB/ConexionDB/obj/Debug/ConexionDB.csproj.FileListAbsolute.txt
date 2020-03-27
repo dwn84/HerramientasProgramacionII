@@ -1,0 +1,9 @@
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\bin\Debug\ConexionDB.exe.config
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\bin\Debug\ConexionDB.exe
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\bin\Debug\ConexionDB.pdb
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.csprojAssemblyReference.cache
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.Form1.resources
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.Properties.Resources.resources
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.csproj.GenerateResource.cache
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.exe
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.pdb
