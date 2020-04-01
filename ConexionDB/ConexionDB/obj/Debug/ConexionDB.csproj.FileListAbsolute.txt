@@ -7,3 +7,4 @@ C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\D
 C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.csproj.GenerateResource.cache
 C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.exe
 C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.pdb
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\ConexionDB\ConexionDB\obj\Debug\ConexionDB.frmClientes.resources
