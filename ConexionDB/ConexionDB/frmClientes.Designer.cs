@@ -45,11 +45,7 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblgen = new System.Windows.Forms.Label();
-            this.lblFec = new System.Windows.Forms.Label();
-            this.lblbar = new System.Windows.Forms.Label();
-            this.lblApe = new System.Windows.Forms.Label();
-            this.lblNom = new System.Windows.Forms.Label();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,7 +53,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtBuscarCed = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnBorrar = new System.Windows.Forms.Button();
+            this.txtEditNom = new System.Windows.Forms.TextBox();
+            this.txtEditApe = new System.Windows.Forms.TextBox();
+            this.txtEditBar = new System.Windows.Forms.TextBox();
+            this.dtpEditFec = new System.Windows.Forms.DateTimePicker();
+            this.cmbEditGen = new System.Windows.Forms.ComboBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,6 +182,7 @@
             this.lsbClientes.Name = "lsbClientes";
             this.lsbClientes.Size = new System.Drawing.Size(295, 225);
             this.lsbClientes.TabIndex = 13;
+            this.lsbClientes.SelectedIndexChanged += new System.EventHandler(this.lsbClientes_SelectedIndexChanged);
             // 
             // btnMostrar
             // 
@@ -204,12 +206,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnActualizar);
+            this.groupBox1.Controls.Add(this.cmbEditGen);
+            this.groupBox1.Controls.Add(this.dtpEditFec);
+            this.groupBox1.Controls.Add(this.txtEditBar);
+            this.groupBox1.Controls.Add(this.txtEditApe);
+            this.groupBox1.Controls.Add(this.txtEditNom);
             this.groupBox1.Controls.Add(this.btnBorrar);
-            this.groupBox1.Controls.Add(this.lblgen);
-            this.groupBox1.Controls.Add(this.lblFec);
-            this.groupBox1.Controls.Add(this.lblbar);
-            this.groupBox1.Controls.Add(this.lblApe);
-            this.groupBox1.Controls.Add(this.lblNom);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
@@ -218,62 +221,23 @@
             this.groupBox1.Controls.Add(this.txtBuscarCed);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(667, 18);
+            this.groupBox1.Location = new System.Drawing.Point(672, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(258, 311);
+            this.groupBox1.Size = new System.Drawing.Size(258, 336);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar información de cliente";
             // 
-            // lblgen
+            // btnBorrar
             // 
-            this.lblgen.AutoSize = true;
-            this.lblgen.Location = new System.Drawing.Point(130, 221);
-            this.lblgen.Name = "lblgen";
-            this.lblgen.Size = new System.Drawing.Size(42, 13);
-            this.lblgen.TabIndex = 28;
-            this.lblgen.Text = "Género";
-            this.lblgen.Visible = false;
-            // 
-            // lblFec
-            // 
-            this.lblFec.AutoSize = true;
-            this.lblFec.Location = new System.Drawing.Point(130, 181);
-            this.lblFec.Name = "lblFec";
-            this.lblFec.Size = new System.Drawing.Size(91, 13);
-            this.lblFec.TabIndex = 27;
-            this.lblFec.Text = "Fecha nacimiento";
-            this.lblFec.Visible = false;
-            // 
-            // lblbar
-            // 
-            this.lblbar.AutoSize = true;
-            this.lblbar.Location = new System.Drawing.Point(130, 259);
-            this.lblbar.Name = "lblbar";
-            this.lblbar.Size = new System.Drawing.Size(34, 13);
-            this.lblbar.TabIndex = 26;
-            this.lblbar.Text = "Barrio";
-            this.lblbar.Visible = false;
-            // 
-            // lblApe
-            // 
-            this.lblApe.AutoSize = true;
-            this.lblApe.Location = new System.Drawing.Point(130, 147);
-            this.lblApe.Name = "lblApe";
-            this.lblApe.Size = new System.Drawing.Size(44, 13);
-            this.lblApe.TabIndex = 25;
-            this.lblApe.Text = "Apellido";
-            this.lblApe.Visible = false;
-            // 
-            // lblNom
-            // 
-            this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(130, 104);
-            this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(44, 13);
-            this.lblNom.TabIndex = 24;
-            this.lblNom.Text = "Nombre";
-            this.lblNom.Visible = false;
+            this.btnBorrar.Enabled = false;
+            this.btnBorrar.Location = new System.Drawing.Point(6, 307);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(119, 23);
+            this.btnBorrar.TabIndex = 29;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // label8
             // 
@@ -336,16 +300,63 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Cédula";
             // 
-            // btnBorrar
+            // txtEditNom
             // 
-            this.btnBorrar.Enabled = false;
-            this.btnBorrar.Location = new System.Drawing.Point(72, 282);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(119, 23);
-            this.btnBorrar.TabIndex = 29;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            this.txtEditNom.Enabled = false;
+            this.txtEditNom.Location = new System.Drawing.Point(128, 100);
+            this.txtEditNom.Name = "txtEditNom";
+            this.txtEditNom.Size = new System.Drawing.Size(100, 20);
+            this.txtEditNom.TabIndex = 30;
+            // 
+            // txtEditApe
+            // 
+            this.txtEditApe.Enabled = false;
+            this.txtEditApe.Location = new System.Drawing.Point(128, 139);
+            this.txtEditApe.Name = "txtEditApe";
+            this.txtEditApe.Size = new System.Drawing.Size(100, 20);
+            this.txtEditApe.TabIndex = 31;
+            // 
+            // txtEditBar
+            // 
+            this.txtEditBar.Enabled = false;
+            this.txtEditBar.Location = new System.Drawing.Point(128, 255);
+            this.txtEditBar.Name = "txtEditBar";
+            this.txtEditBar.Size = new System.Drawing.Size(100, 20);
+            this.txtEditBar.TabIndex = 34;
+            // 
+            // dtpEditFec
+            // 
+            this.dtpEditFec.CustomFormat = "yyyy-MM-dd";
+            this.dtpEditFec.Enabled = false;
+            this.dtpEditFec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEditFec.Location = new System.Drawing.Point(128, 178);
+            this.dtpEditFec.Name = "dtpEditFec";
+            this.dtpEditFec.Size = new System.Drawing.Size(100, 20);
+            this.dtpEditFec.TabIndex = 19;
+            // 
+            // cmbEditGen
+            // 
+            this.cmbEditGen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditGen.Enabled = false;
+            this.cmbEditGen.FormattingEnabled = true;
+            this.cmbEditGen.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cmbEditGen.Location = new System.Drawing.Point(128, 217);
+            this.cmbEditGen.Name = "cmbEditGen";
+            this.cmbEditGen.Size = new System.Drawing.Size(100, 21);
+            this.cmbEditGen.TabIndex = 19;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Enabled = false;
+            this.btnActualizar.Location = new System.Drawing.Point(133, 307);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(119, 23);
+            this.btnActualizar.TabIndex = 35;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // frmClientes
             // 
@@ -397,11 +408,6 @@
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblgen;
-        private System.Windows.Forms.Label lblFec;
-        private System.Windows.Forms.Label lblbar;
-        private System.Windows.Forms.Label lblApe;
-        private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -410,5 +416,11 @@
         private System.Windows.Forms.TextBox txtBuscarCed;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.ComboBox cmbEditGen;
+        private System.Windows.Forms.DateTimePicker dtpEditFec;
+        private System.Windows.Forms.TextBox txtEditBar;
+        private System.Windows.Forms.TextBox txtEditApe;
+        private System.Windows.Forms.TextBox txtEditNom;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
