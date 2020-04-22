@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCed = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
@@ -45,6 +46,12 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.cmbEditGen = new System.Windows.Forms.ComboBox();
+            this.dtpEditFec = new System.Windows.Forms.DateTimePicker();
+            this.txtEditBar = new System.Windows.Forms.TextBox();
+            this.txtEditApe = new System.Windows.Forms.TextBox();
+            this.txtEditNom = new System.Windows.Forms.TextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -53,13 +60,17 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtBuscarCed = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtEditNom = new System.Windows.Forms.TextBox();
-            this.txtEditApe = new System.Windows.Forms.TextBox();
-            this.txtEditBar = new System.Windows.Forms.TextBox();
-            this.dtpEditFec = new System.Windows.Forms.DateTimePicker();
-            this.cmbEditGen = new System.Windows.Forms.ComboBox();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.cedulaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.nombreErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.apellidoErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FechaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BarrioerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cedulaErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombreErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apellidoErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FechaerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BarrioerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,6 +88,8 @@
             this.txtCed.Name = "txtCed";
             this.txtCed.Size = new System.Drawing.Size(100, 20);
             this.txtCed.TabIndex = 1;
+            this.txtCed.TextChanged += new System.EventHandler(this.txtCed_TextChanged);
+            this.txtCed.Validated += new System.EventHandler(this.txtCed_Validated);
             // 
             // txtNom
             // 
@@ -84,6 +97,7 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(100, 20);
             this.txtNom.TabIndex = 3;
+            this.txtNom.Validated += new System.EventHandler(this.txtNom_Validated);
             // 
             // label2
             // 
@@ -116,6 +130,7 @@
             this.txtBarrio.Name = "txtBarrio";
             this.txtBarrio.Size = new System.Drawing.Size(100, 20);
             this.txtBarrio.TabIndex = 7;
+            this.txtBarrio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarrio_KeyPress);
             // 
             // label4
             // 
@@ -143,6 +158,7 @@
             this.dtpFec.Name = "dtpFec";
             this.dtpFec.Size = new System.Drawing.Size(100, 20);
             this.dtpFec.TabIndex = 9;
+            this.dtpFec.Validated += new System.EventHandler(this.dtpFec_Validated);
             // 
             // label6
             // 
@@ -228,6 +244,64 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar información de cliente";
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Enabled = false;
+            this.btnActualizar.Location = new System.Drawing.Point(133, 307);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(119, 23);
+            this.btnActualizar.TabIndex = 35;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // cmbEditGen
+            // 
+            this.cmbEditGen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditGen.Enabled = false;
+            this.cmbEditGen.FormattingEnabled = true;
+            this.cmbEditGen.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cmbEditGen.Location = new System.Drawing.Point(128, 217);
+            this.cmbEditGen.Name = "cmbEditGen";
+            this.cmbEditGen.Size = new System.Drawing.Size(100, 21);
+            this.cmbEditGen.TabIndex = 19;
+            // 
+            // dtpEditFec
+            // 
+            this.dtpEditFec.CustomFormat = "yyyy-MM-dd";
+            this.dtpEditFec.Enabled = false;
+            this.dtpEditFec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEditFec.Location = new System.Drawing.Point(128, 178);
+            this.dtpEditFec.Name = "dtpEditFec";
+            this.dtpEditFec.Size = new System.Drawing.Size(100, 20);
+            this.dtpEditFec.TabIndex = 19;
+            // 
+            // txtEditBar
+            // 
+            this.txtEditBar.Enabled = false;
+            this.txtEditBar.Location = new System.Drawing.Point(128, 255);
+            this.txtEditBar.Name = "txtEditBar";
+            this.txtEditBar.Size = new System.Drawing.Size(100, 20);
+            this.txtEditBar.TabIndex = 34;
+            // 
+            // txtEditApe
+            // 
+            this.txtEditApe.Enabled = false;
+            this.txtEditApe.Location = new System.Drawing.Point(128, 139);
+            this.txtEditApe.Name = "txtEditApe";
+            this.txtEditApe.Size = new System.Drawing.Size(100, 20);
+            this.txtEditApe.TabIndex = 31;
+            // 
+            // txtEditNom
+            // 
+            this.txtEditNom.Enabled = false;
+            this.txtEditNom.Location = new System.Drawing.Point(128, 100);
+            this.txtEditNom.Name = "txtEditNom";
+            this.txtEditNom.Size = new System.Drawing.Size(100, 20);
+            this.txtEditNom.TabIndex = 30;
+            // 
             // btnBorrar
             // 
             this.btnBorrar.Enabled = false;
@@ -300,69 +374,32 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Cédula";
             // 
-            // txtEditNom
+            // cedulaErrorProvider
             // 
-            this.txtEditNom.Enabled = false;
-            this.txtEditNom.Location = new System.Drawing.Point(128, 100);
-            this.txtEditNom.Name = "txtEditNom";
-            this.txtEditNom.Size = new System.Drawing.Size(100, 20);
-            this.txtEditNom.TabIndex = 30;
+            this.cedulaErrorProvider.BlinkRate = 500;
+            this.cedulaErrorProvider.ContainerControl = this;
             // 
-            // txtEditApe
+            // nombreErrorProvider
             // 
-            this.txtEditApe.Enabled = false;
-            this.txtEditApe.Location = new System.Drawing.Point(128, 139);
-            this.txtEditApe.Name = "txtEditApe";
-            this.txtEditApe.Size = new System.Drawing.Size(100, 20);
-            this.txtEditApe.TabIndex = 31;
+            this.nombreErrorProvider.ContainerControl = this;
             // 
-            // txtEditBar
+            // apellidoErrorProvider
             // 
-            this.txtEditBar.Enabled = false;
-            this.txtEditBar.Location = new System.Drawing.Point(128, 255);
-            this.txtEditBar.Name = "txtEditBar";
-            this.txtEditBar.Size = new System.Drawing.Size(100, 20);
-            this.txtEditBar.TabIndex = 34;
+            this.apellidoErrorProvider.ContainerControl = this;
             // 
-            // dtpEditFec
+            // FechaerrorProvider
             // 
-            this.dtpEditFec.CustomFormat = "yyyy-MM-dd";
-            this.dtpEditFec.Enabled = false;
-            this.dtpEditFec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEditFec.Location = new System.Drawing.Point(128, 178);
-            this.dtpEditFec.Name = "dtpEditFec";
-            this.dtpEditFec.Size = new System.Drawing.Size(100, 20);
-            this.dtpEditFec.TabIndex = 19;
+            this.FechaerrorProvider.ContainerControl = this;
             // 
-            // cmbEditGen
+            // BarrioerrorProvider
             // 
-            this.cmbEditGen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEditGen.Enabled = false;
-            this.cmbEditGen.FormattingEnabled = true;
-            this.cmbEditGen.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cmbEditGen.Location = new System.Drawing.Point(128, 217);
-            this.cmbEditGen.Name = "cmbEditGen";
-            this.cmbEditGen.Size = new System.Drawing.Size(100, 21);
-            this.cmbEditGen.TabIndex = 19;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Enabled = false;
-            this.btnActualizar.Location = new System.Drawing.Point(133, 307);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(119, 23);
-            this.btnActualizar.TabIndex = 35;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.BarrioerrorProvider.ContainerControl = this;
             // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 366);
+            this.ClientSize = new System.Drawing.Size(948, 366);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.lsbClientes);
@@ -384,6 +421,11 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmClientes_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cedulaErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombreErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apellidoErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FechaerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BarrioerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,5 +464,10 @@
         private System.Windows.Forms.TextBox txtEditApe;
         private System.Windows.Forms.TextBox txtEditNom;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.ErrorProvider cedulaErrorProvider;
+        private System.Windows.Forms.ErrorProvider nombreErrorProvider;
+        private System.Windows.Forms.ErrorProvider apellidoErrorProvider;
+        private System.Windows.Forms.ErrorProvider FechaerrorProvider;
+        private System.Windows.Forms.ErrorProvider BarrioerrorProvider;
     }
 }
