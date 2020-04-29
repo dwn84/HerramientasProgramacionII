@@ -39,6 +39,8 @@ create table Articulos(
 
 insert into Proveedores values ('p1','Colanta','2113344','cra 1 #22','colanta@colanta.com');
 insert into Proveedores values ('p2','Alqueria','4118344','cra 2 #33','gerencia@alqueria.com');
+insert into Proveedores values ('p4','Marion','4448877','cra 54 #50-34','marion@marion.com');
+insert into Proveedores values ('p9','Samsung','5448877','cra 10 #10-34','samsung@samsung.com');
 
 insert into Categorias values ('c1','Mercado');
 insert into Categorias values ('c2','Electrodomésticos');
