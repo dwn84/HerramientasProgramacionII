@@ -18,3 +18,13 @@ C:\Users\samaniw\Desktop\HerramientasProgramacionII-master\EjemploDatagrid\Ejemp
 C:\Users\samaniw\Desktop\HerramientasProgramacionII-master\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.csproj.GenerateResource.cache
 C:\Users\samaniw\Desktop\HerramientasProgramacionII-master\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.exe
 C:\Users\samaniw\Desktop\HerramientasProgramacionII-master\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.pdb
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\bin\Debug\EjemploDatagrid.exe.config
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\bin\Debug\EjemploDatagrid.exe
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\bin\Debug\EjemploDatagrid.pdb
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.csprojAssemblyReference.cache
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.Form1.resources
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.frmFactura.resources
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.Properties.Resources.resources
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.csproj.GenerateResource.cache
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.exe
+C:\xampp\htdocs\servicios\HerramientasProgramacionII\EjemploDatagrid\EjemploDatagrid\obj\Debug\EjemploDatagrid.pdb

@@ -46,6 +46,8 @@ namespace EjemploDatagrid
                     int cantidad = int.Parse(txtCantidad.Text);
                     double precio = double.Parse(txtPrecio.Text);
                     double total = cantidad * precio;
+                    Object[] datos = { descripcion, cantidad };
+                    dgvProductos.Rows.Add(datos);
                     dgvProductos.Rows.Add(new Object[] { descripcion, precio, cantidad, total });
                     Limpiar();
                     
