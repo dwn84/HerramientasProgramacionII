@@ -41,6 +41,9 @@
             this.cmbCat = new System.Windows.Forms.ComboBox();
             this.txtPre = new System.Windows.Forms.NumericUpDown();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnCategorias = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPre)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +55,8 @@
             this.dgvArt.Name = "dgvArt";
             this.dgvArt.Size = new System.Drawing.Size(756, 297);
             this.dgvArt.TabIndex = 0;
+            this.dgvArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArt_CellContentClick);
+            this.dgvArt.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArt_CellDoubleClick);
             // 
             // label1
             // 
@@ -158,7 +163,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(27, 326);
+            this.btnGuardar.Location = new System.Drawing.Point(22, 326);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 13;
@@ -166,11 +171,45 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Location = new System.Drawing.Point(184, 326);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Enabled = false;
+            this.btnActualizar.Location = new System.Drawing.Point(103, 326);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 15;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnCategorias
+            // 
+            this.btnCategorias.Location = new System.Drawing.Point(27, 368);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(232, 23);
+            this.btnCategorias.TabIndex = 16;
+            this.btnCategorias.Text = "Gestionar Categorias";
+            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 403);
+            this.Controls.Add(this.btnCategorias);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtPre);
             this.Controls.Add(this.cmbCat);
@@ -210,5 +249,8 @@
         private System.Windows.Forms.ComboBox cmbCat;
         private System.Windows.Forms.NumericUpDown txtPre;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnCategorias;
     }
 }
