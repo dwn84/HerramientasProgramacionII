@@ -51,3 +51,68 @@ insert into Articulos values('A00002','Bolsa de leche',2900,'p2','c1');
 insert into Articulos values('A00001','Bolsa de leche',5500,'p3','c1');
 
 ```
+
+
+# Ejemplo de análisis
+[Catálogo de libros](https://abiesweb.educastur.es/index.php/catalogo/index?idEstructura=6310&_reset=true).
+
+# Base de datos propuesta para el catálogo
+```sql
+create database biblioteca;
+use biblioteca;
+
+CREATE TABLE editorial (
+    id int primary key identity,
+    nombre vachar(30)
+);
+
+CREATE TABLE tipos (
+    id int primary key identity,
+    nombre_tipo vachar(10)
+);
+
+CREATE TABLE libros (
+    id int primary key,
+    nombre vachar(30),
+    ideditorial int,
+    numpaginas int,
+    FOREIGN KEY (ideditorial) REFERENCES editorial(id)
+);
+
+CREATE TABLE ejemplares (
+    id int primary key identity,
+    codigo vachar(10) unique,
+    ubicacion vachar(5),
+    idtipo int,
+    idlibro int,
+    diasprestamo int DEFAULT 8,
+    estado varchar(13) DEFAULT 'No Disponible',
+    FOREIGN KEY (idlibro) REFERENCES libros(id),
+    FOREIGN KEY (idtipo) REFERENCES tipos(id)
+);
+
+
+CREATE TABLE usuarios (
+    id int primary key,
+    nombre vachar(50),
+    direccion vachar(50),
+    telefono vachar(15),
+    edad int
+);
+
+
+CREATE TABLE prestamos (
+    id int primary key identity,
+    idusuario int,
+    idejemplar int,
+    fechaprestamo date,
+    fechaLimiteEntrega date,
+    fechaDevolucion date,
+    FOREIGN KEY (idejemplar) REFERENCES ejemplares(id),
+    FOREIGN KEY (idusuario) REFERENCES usuarios(id)
+
+);
+
+
+```
+
