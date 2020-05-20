@@ -54,7 +54,7 @@ insert into Articulos values('A00001','Bolsa de leche',5500,'p3','c1');
 
 
 # Ejemplo de análisis
-[Catálogo](https://abiesweb.educastur.es/index.php/catalogo/index?codigo=Catalogo_Fondo).
+[Catálogo de libros](https://abiesweb.educastur.es/index.php/catalogo/index?idEstructura=6310&_reset=true).
 
 # Base de datos propuesta para el catálogo
 ```sql
