@@ -19,8 +19,16 @@ namespace ConexionDB
         public frmArticulo()
         {
             InitializeComponent();
-            conexion = new SqlConnection("server=SYN\\SQLEXPRESS;database=base1;integrated security=true;MultipleActiveResultSets=True");
-            conexion.Open();
+            try
+            {
+                conexion = new SqlConnection("server=SYN\\SQLEXPRESS;database=bas1;integrated security=true;MultipleActiveResultSets=True");
+                conexion.Open();
+            }
+            catch (Exception e) {
+                MessageBox.Show("Error, contacte al administrador");
+                Application.Exit();
+            }
+            
         }
 
         private void actualizarDataGrid() {
@@ -91,7 +99,9 @@ namespace ConexionDB
                                     "join Categorias C on C.CodigoCategoria = A.CodigoCat";
 
             DataTable dtA = new DataTable();
-            dtA.Load(consultaA.ExecuteReader());
+            
+            SqlDataAdapter consultaEjecutada = new SqlDataAdapter(consultaA);
+            consultaEjecutada.Fill(dtA);
             dgvArt.DataSource = dtA;
         }
 
@@ -139,8 +149,15 @@ namespace ConexionDB
         private void btnCategorias_Click(object sender, EventArgs e)
         {
             //abrir el formulario de gestion de categorias
-            frmCategorias f = new frmCategorias(txtDes.Text, txtPre.Text, cmbCat.SelectedValue.ToString());
+            frmCategorias f = new frmCategorias(txtDes.Text, txtPre.Text, cmbCat.SelectedValue.ToString(),dgvArt);
             f.ShowDialog();
+
+            //volver a ejecutar "select * from..."
+
+            string mensaje = "";
+            mensaje = f.datos.Rows[0].Cells[1].Value.ToString();
+            MessageBox.Show(mensaje);
+
         }
     }
 }

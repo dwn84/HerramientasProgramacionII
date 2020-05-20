@@ -1,0 +1,9 @@
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\bin\Debug\SistemaCatalogoBiblioteca.exe.config
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\bin\Debug\SistemaCatalogoBiblioteca.exe
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\bin\Debug\SistemaCatalogoBiblioteca.pdb
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\obj\Debug\SistemaCatalogoBiblioteca.csprojAssemblyReference.cache
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\obj\Debug\SistemaCatalogoBiblioteca.Form1.resources
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\obj\Debug\SistemaCatalogoBiblioteca.Properties.Resources.resources
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\obj\Debug\SistemaCatalogoBiblioteca.csproj.GenerateResource.cache
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\obj\Debug\SistemaCatalogoBiblioteca.exe
+C:\Users\samaniw\source\repos\SistemaCatalogoBiblioteca\obj\Debug\SistemaCatalogoBiblioteca.pdb
